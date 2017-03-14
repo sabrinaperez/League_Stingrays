@@ -18,6 +18,7 @@ import javax.swing.JPanel;
 
 public class RockPaperScissors extends JPanel implements ActionListener{
     //2. create an object of the Random class
+	Random Chikaleta = new Random();
     
     JFrame window = new JFrame("Rock Paper Scissors");
     JButton rockButton = new JButton();
@@ -37,9 +38,9 @@ public class RockPaperScissors extends JPanel implements ActionListener{
         try {
             //1. On the internet, find a picture of a rock, some paper, and scissors. Replace the 
             //   strings below with the URL to your image
-            rockImage = ImageIO.read(new URL("http://www.drodd.com/images14/x19.jpg"));  
-            paperImage = ImageIO.read(new URL("http://www.drodd.com/images14/x19.jpg")); 
-            scissorsImage = ImageIO.read(new URL("http://www.drodd.com/images14/x19.jpg")); 
+            rockImage = ImageIO.read(new URL("http://i3.mirror.co.uk/incoming/article3385184.ece/ALTERNATES/s615b/The-Rock-Hulk-Hogan-and-Steve-Austin.jpg"));  
+            paperImage = ImageIO.read(new URL("http://pre05.deviantart.net/8bd2/th/pre/i/2012/070/8/3/cute_paper_2_by_muddy_mudkip-d4sga1h.jpg")); 
+            scissorsImage = ImageIO.read(new URL("http://www.bostitchoffice.com/_images/_products/1425/_thumbs/xlg_53f64f24eb1ee.png")); 
         } catch (MalformedURLException ex) {
             Logger.getLogger(RockPaperScissors.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
@@ -77,7 +78,7 @@ public class RockPaperScissors extends JPanel implements ActionListener{
         
         
         //3. fix the next line so that the opponent's selection is random
-        int opponentSelection = 0;
+        int opponentSelection =Chikaleta.nextInt(3);
         
         if(e.getSource() == paperButton){
             selection = 1;

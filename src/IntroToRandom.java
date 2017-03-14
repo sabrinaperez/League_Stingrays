@@ -1,3 +1,5 @@
+import java.util.Random;
+
 //1. Run the program.  What number appears?
 
 //2. Make the number random.
@@ -11,9 +13,9 @@
 public class IntroToRandom {
 	public static void main(String[] args) {
 		//Create an object of the Random class here
+		Random Chikaleta = new Random(); 
 		
-		
-		int i = 0;
+		int i =Chikaleta.nextInt();
 		
 		System.out.println(i);
 	}
